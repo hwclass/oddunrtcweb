@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import Nav from './components/Nav';
 
 class App extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+        <Nav/>
         {this.state.title}
       </div>
     )
