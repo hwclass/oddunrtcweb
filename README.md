@@ -8,3 +8,5 @@ The site for oddunrtc.
 ```sudo npm install```
 ####Start
 ```npm run start-webpack```
+####Run within the browser
+```localhost:8080```
