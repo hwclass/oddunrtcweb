@@ -9,7 +9,7 @@ class App extends Component {
     }
   }
   render() {
-    return(
+    return (
       <div className="container">
         {this.state.title}
       </div>
@@ -17,4 +17,4 @@ class App extends Component {
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+ReactDOM.render(<App/>, document.querySelector('#app'));
