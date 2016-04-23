@@ -9,16 +9,27 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title : 'ODDUNRTC WEB SITE'
+      title : 'ODDUNRTC WEB SITE',
+      contents : [
+        {title : 'about', heading : 'İhtiyacınız olan şeyi biliyoruz', text : 'Ekstra donanım, yazılım ve eklentiye gerek yok. Her gün kullandığın bir internet tarayıcısı yeterli!'},
+        {title : 'servies', heading : 'ÖZELLİKLER', text : 'services text.'},
+        {title : 'portfolio', heading : 'portfolio heading', text: 'portfolio text'},
+        {title : 'contact', heading : 'İLETİŞİME GEÇ!', text: 'Bir sonraki görüşmeni bizle yapmaya ne dersin? Hemen mail at ya da ara, hesabını oluşturalım.'}
+      ]
     }
   }
   render() {
+
+    const contents = this.state.contents.map((content) => {
+      return <Content key={Math.random(new Date().getUTCMilliseconds() * 100)} content={content}/>;
+    })
+
     return (
       <div className="container">
         <Nav/>
         <Header/>
         {this.state.title}
-        <Content/>
+        {contents}
         <Aside/>
       </div>
     )
