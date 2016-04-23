@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Nav from './components/Nav';
 import Header from './components/Header';
+import Content from './components/Content';
+import Aside from './components/Aside';
 
 class App extends Component {
   constructor(props) {
@@ -16,6 +18,8 @@ class App extends Component {
         <Nav/>
         <Header/>
         {this.state.title}
+        <Content/>
+        <Aside/>
       </div>
     )
   }
