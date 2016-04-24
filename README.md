@@ -1,7 +1,7 @@
 # oddunrtcweb
 The site for oddunrtc.
 
-<img src="http://i65.tinypic.com/14vu23k.png" style="width: 100%;" border="0">
+<img src="http://i67.tinypic.com/k04x91.png" style="width: 100%;" border="0">
 
 ###Steps
 ####Install
