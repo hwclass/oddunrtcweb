@@ -4,11 +4,20 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 import ReduxThunk from 'redux-thunk';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+
 import reducers from './reducers';
 import Nav from './components/Nav';
 import Header from './components/Header';
 import SectionList from './containers/SectionList';
 import Aside from './components/Aside';
+
+require('bootstrap/less/bootstrap.less');
+require('font-awesome/less/font-awesome.less');
+require('animate.css/animate.min.css');
+require('./stylesheets/components/app.less');
+
+require('jquery/dist/jquery.min');
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise, ReduxThunk)(createStore);
 
@@ -21,10 +30,9 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="container">
+      <div>
         <Nav/>
         <Header/>
-        {this.state.title}
         <SectionList/>
         <Aside/>
       </div>
@@ -35,4 +43,5 @@ class App extends Component {
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <App/>
-  </Provider>, document.querySelector('#app'));
+  </Provider>,
+  document.querySelector('#app'));

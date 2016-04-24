@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+require('bootstrap/dist/js/bootstrap.min');
 const Header = () => {
   return(
     <header>

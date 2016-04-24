@@ -4,7 +4,7 @@ const Section = (props) => {
   const classes = {};
   const customAttrs = {};
   return(
-    <section className="bg-primary" id="about">
+    <section className="bg-primary" id={props.section.title}>
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-lg-offset-2 text-center">

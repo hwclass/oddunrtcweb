@@ -1,4 +1,5 @@
-const autoprefixer = require('autoprefixer'),
+const webpack = require('webpack'), 
+      autoprefixer = require('autoprefixer'),
       ExtractTextPlugin = require('extract-text-webpack-plugin'),
       path = require('path');
 
@@ -18,7 +19,12 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('[name].css'),
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery"
+    })
   ],
   postcss: [
     autoprefixer({
@@ -53,6 +59,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!'))
+      },
+      {
+        test: /\.less$/,
+        loader: "style!css!less"
       },
       { 
         test: /\.jsx?$/, 

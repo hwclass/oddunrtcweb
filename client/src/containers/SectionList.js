@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { selectSection } from '../actions/index';
+import { bindActionCreators } from 'redux';
 import Section from './../components/Section';
 
 class SectionList extends Component {
@@ -7,7 +9,7 @@ class SectionList extends Component {
   renderSectionList() {
     return this.props.sections.map((section) => {
       return(
-        <Section key={Math.random(new Date().getUTCMilliseconds() * 100)} section={section}/>
+        <Section key={Math.random(new Date().getUTCMilliseconds() * 100)} id={section.title} section={section}/>
       )
     });
   }
@@ -19,6 +21,7 @@ class SectionList extends Component {
       </span>
     )
   }
+
 };
 
 function mapStateToProps(state) {
@@ -27,4 +30,8 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(SectionList);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({selectSection: selectSection}, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SectionList);
