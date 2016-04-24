@@ -18,6 +18,7 @@ require('animate.css/animate.min.css');
 require('./stylesheets/components/app.less');
 
 require('jquery/dist/jquery.min');
+require('jquery-easing/jquery.easing.1.3');
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise, ReduxThunk)(createStore);
 
