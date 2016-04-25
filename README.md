@@ -3,10 +3,10 @@ The site for oddunrtc.
 
 ###Tech Stack
 
-[x] - Webpack
-[x] - React
-[x] - Redux
-[x] - Less
+- [x] Webpack
+- [x] React
+- [x] Redux
+- [x] Less
 
 <img src="http://i67.tinypic.com/k04x91.png" style="width: 100%;" border="0">
 
