@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import { realTimeCommunication, untilBetter, more } from './../constants';
+
 require('bootstrap/dist/js/bootstrap.min');
+
 const Header = () => {
   return(
     <header>
       <div className="header-content">
         <div className="header-content-inner">
-          <h1>GERÇEK ZAMANLI VİDEOLU İLETİŞİM</h1>
+          <h1>{realTimeCommunication}</h1>
           <hr/>
-          <p>Daha iyisi yapılana kadar en iyi WebRTC destekli iletişim aracı.</p>
-          <a href="#about" className="btn btn-primary btn-xl page-scroll">Dahası..</a>
+          <p>{untilBetter}</p>
+          <a href="#about" className="btn btn-primary btn-xl page-scroll">{more}</a>
         </div>
       </div>
     </header>

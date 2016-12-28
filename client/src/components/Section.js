@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { caption } from './../constants';
 
 const Section = (props) => {
   const classes = {};
@@ -11,7 +12,7 @@ const Section = (props) => {
             <h2 className="section-heading">{props.section.heading}</h2>
             <hr className="light"/>
             <p className="text-faded">{props.section.text}</p>
-            <a href="#" className="btn btn-default btn-xl">HADİ BAKALIM!</a>
+            <a href="#" className="btn btn-default btn-xl">{caption}</a>
           </div>
         </div>
       </div>
